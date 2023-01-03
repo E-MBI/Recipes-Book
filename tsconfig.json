@@ -2,14 +2,21 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+
     "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "strictFunctionTypes": false,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -19,11 +26,11 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false
   },
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

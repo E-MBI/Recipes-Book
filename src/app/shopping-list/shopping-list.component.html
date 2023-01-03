@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-shopping-edit
+      (ingrdName)="onAddIngredient($event)"
+    ></app-shopping-edit>
+  </div>
+
+  <div class="row ingredient">
+    <span *ngFor="let ingred of ingredients">
+      {{ ingred.name }}
+      <strong>
+        {{ ingred.amount }}
+      </strong>
+    </span>
+  </div>
+</div>

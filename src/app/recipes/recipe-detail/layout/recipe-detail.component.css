@@ -1,0 +1,23 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  background-color: #d7d7d7;
+}
+.card .image {
+  flex: 0 0 0;
+  max-width: 100%;
+  height: 50%;
+}
+.card .image img {
+  display: block;
+  width: 100%;
+  height: 90%;
+}/*# sourceMappingURL=recipe-detail.component.css.map */

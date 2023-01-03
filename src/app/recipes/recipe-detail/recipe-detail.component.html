@@ -1,0 +1,56 @@
+<!--Manage Recipe -->
+<div class="row">
+  <h1 class="title fw-bold">{{ recipe.name }}</h1>
+
+  <div class="box card">
+    <!-- image -->
+    <div class="image col p-0">
+      <img
+        src="{{ recipe.imagedata }}"
+        class="card-img-top"
+        alt="{{ recipe.name }}"
+      />
+    </div>
+    <!-- card-body -->
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.name }}</h5>
+      <p class="card-text">{{ recipe.description }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="row col p-2 my-4 dropdown filter-item">
+  <div class="card w-100 card-outline card-primary">
+    <div class="card-header">
+      <h1 class="card-title text-bold">Manange Recipe</h1>
+      <div class="card-tools">
+        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+          <i class="fas fa-minus"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- List Body -->
+    <div
+      class="card-body dropdown-group p-0 m-0"
+      style="display: block"
+      appDropdown
+    >
+      <ul>
+        <li>
+          <a class="dropdown-item text-dark fw-bold" href="#">To Shopping </a>
+        </li>
+
+        <li>
+          <a class="dropdown-item text-dark fw-bold" href="#"> Edit Recipe </a>
+        </li>
+
+        <li>
+          <a class="dropdown-item text-dark fw-bold" href="#">
+            Delete Recipe
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

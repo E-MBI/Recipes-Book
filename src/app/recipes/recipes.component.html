@@ -1,0 +1,28 @@
+<div class="row col-12 row-one py-4 mx-3">
+  <button class="btn btn-success" type="submit">New-Recipes</button>
+</div>
+
+<div
+  class="recipe-cont flex-wrap align-items-center flex-column-reverse flex-sm-row align-items-sm-start"
+>
+  <!-- recipe list -->
+  <div class="row col align-items-center col-sm-7">
+    <app-recipe-list
+      (RecipeWasSelected)="SelectedRecipe = $event"
+    ></app-recipe-list>
+  </div>
+
+  <!--  recipe detail-->
+  <div class="row col-7 col-sm-4">
+    <app-recipe-detail
+      *ngIf="SelectedRecipe; else infoText"
+      style="width: 100%"
+      [recipe]="SelectedRecipe"
+    >
+    </app-recipe-detail>
+
+    <ng-template #infoText>
+      <div class="alert alert-danger" role="alert">Please Select a Recipe</div>
+    </ng-template>
+  </div>
+</div>

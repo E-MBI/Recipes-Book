@@ -1,0 +1,10 @@
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.ingredient span {
+  display: block;
+  padding: 0.5rem 0rem;
+  margin: 0.5rem 0rem;
+}/*# sourceMappingURL=shopping-list.component.css.map */

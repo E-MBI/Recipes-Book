@@ -1,0 +1,73 @@
+<div class="container-fluid py-4">
+  <!--shopping list  -->
+  <div class="row col">
+    <form class="d-sm-flex" action="#">
+      <!-- Recipe Name   -->
+      <div class="form-group recpName col-6 col-sm-7">
+        <label
+          class="col-form-label text-success m-2"
+          *ngIf="validName !== ''"
+          for="inputSuccess"
+        >
+          <i class="fas fa-check"></i>
+          Success
+        </label>
+
+        <label class="w-100">
+          Recipe Name
+          <input
+            type="text"
+            class="form-control border-secondary"
+            id="inputSuccess"
+            placeholder="Enter Recipe Name"
+            (change)="onchange()"
+            [(ngModel)]="ing.name"
+            [ngModelOptions]="{ standalone: true }"
+            #recipeInput
+          />
+        </label>
+      </div>
+      <!-- Recipe Amount   -->
+      <div class="form-group recpName col-6 col-sm-4">
+        <label
+          class="col-form-label text-success m-2"
+          *ngIf="validAmount >= 1"
+          for="inputSuccess"
+        >
+          <i class="fas fa-check"></i>
+          Success
+        </label>
+
+        <label class="w-100">
+          Recipe Amount
+          <input
+            type="number"
+            min="0"
+            class="form-control border-secondary m-2"
+            id="inputSuccess"
+            placeholder=" Recipe Amount"
+            (change)="onchange()"
+            [(ngModel)]="ing.amount"
+            [ngModelOptions]="{ standalone: true }"
+            #recipeAmount
+          />
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <div class="form-controller row col p-4">
+    <button
+      type="submit"
+      class="btn btn-outline-success m-1"
+      (click)="onAddName()"
+    >
+      Add
+    </button>
+
+    <button type="submit" class="btn btn-outline-danger m-1">Delete</button>
+
+    <button type="submit" class="btn btn-outline-primary m-1">Clear</button>
+  </div>
+  <!-- shopping-edit -->
+</div>

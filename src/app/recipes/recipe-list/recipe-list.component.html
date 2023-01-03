@@ -1,0 +1,12 @@
+<div class="container-fluid my-4">
+  <!-- recipe item  -->
+  <div class="row">
+    <div class="col col-10-sm">
+      <app-recipe-item
+        *ngFor="let recipeEl of recipes"
+        [recipe]="recipeEl"
+        (SelectedRecipe)="onRecipeWasSelected(recipeEl)"
+      ></app-recipe-item>
+    </div>
+  </div>
+</div>

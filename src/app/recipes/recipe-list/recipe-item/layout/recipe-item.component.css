@@ -1,0 +1,75 @@
+/***Global rules***/
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+}
+
+.card {
+  background-color: #d7d7d7;
+}
+
+.recipe-item {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #2e2e2e;
+}
+.recipe-item .meals-cont > .meals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.recipe-item .meals-cont > .meals .box {
+  background: #dbdbdb;
+  border: thin solid #b3b3b3;
+  box-shadow: 2px 6px 18px 5px #bdbdbd;
+  transition: all 0.3s;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem;
+  border-radius: 0.5rem;
+  flex: 0 0 0 !important;
+  height: 70vh !important;
+  gap: 1rem;
+}
+.recipe-item .meals-cont > .meals .box:hover {
+  transition: all 0.3s;
+  box-shadow: 2px 6px 18px 5px #666666;
+  background: #ffffff;
+}
+.recipe-item .meals-cont > .meals .image {
+  height: 60%;
+  padding: 0;
+  margin: 0;
+}
+.recipe-item .meals-cont > .meals .image img {
+  margin: 0 auto;
+  border-radius: 4px;
+  height: 100%;
+  padding: 0;
+}
+
+/***** media query ******/
+@media (min-width: 768px) {
+  .row > .meals-cont {
+    padding: 7.5px;
+    border-right: thin solid #666666;
+  }
+  .row > .meals-cont > .meals .box > .image {
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .row .meals > .meals-cont .box {
+    height: 50vh;
+  }
+}/*# sourceMappingURL=recipe-item.component.css.map */

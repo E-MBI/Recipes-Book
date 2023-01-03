@@ -1,0 +1,32 @@
+<!-- recipe product -->
+<a
+  href="#"
+  (click)="onSelecteRecipe()"
+  class="recipe-item container-fluid row d-flex flex-column-reverse flex-sm-row align-items-sm-start"
+>
+  <div class="col meals-cont">
+    <div
+      class="col meals d-flex flex-column justify-content-center align-items-center pb-3 mb-3"
+    >
+      <!-- product-item -->
+      <div
+        class="box card col-12 col-md-10 col-lg-8 box d-flex flex-column flex-md-row p-0"
+      >
+        <!-- image -->
+        <div class="image col col-md-4 p-0">
+          <img
+            src="{{ recipe.imagedata }}"
+            class="card-img-top w-100 d-block"
+            alt="{{ recipe.name }}"
+          />
+        </div>
+        <!-- card-body -->
+        <div class="card-body col-6-md">
+          <h5 class="card-title text-bold">{{ recipe.name }}</h5>
+          <p class="card-text">{{ recipe.description }}</p>
+          <a href="#" class="btn btn-primary p-2">Show More !</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
